@@ -1,4 +1,6 @@
 
+% These exceptions produce chord names similar to the Stadards Real Book
+
 chExceptionMusic = {
   <c e  g  b >1-\markup       { "ma" \super "7"  }
   <c ef g  bf>1-\markup       { "mi" \super "7"  }
@@ -10,3 +12,6 @@ chExceptionMusic = {
 }
 
 chExceptions = #(sequential-music-to-chord-exceptions chExceptionMusic #t)
+
+% Prefer the use of the Lilypond scheme $ syntax to the # syntax for string
+% Literals due to SubLilyPond detecting ; in a # string as a comment.
