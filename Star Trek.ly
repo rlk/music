@@ -1,17 +1,6 @@
 \language "english"
 \version "2.18.2"
-
-chExceptionMusic = {
-  <c e  g  b >1-\markup       { "ma" \super "7"  }
-  <c ef g  bf>1-\markup       { "mi" \super "7"  }
-  <c ef g  a>1-\markup        { "mi" \super "6"  }
-  <c ef g  bf d' f'>1-\markup { "mi" \super "11" }
-  <c ef gf bf>1-\markup       { "mi" \super { "7"  \hspace #0.4 \raise #0.4 \smaller{\flat}  "5"  }}
-  <c e g bf d' fs'>1-\markup    {    \super { "9"  \hspace #0.4 \raise #0.4 \smaller{\sharp} "11" }}
-  <c e g bf d' fs' a'>1-\markup {    \super { "13" \hspace #0.4 \raise #0.4 \smaller{\sharp} "11" }}
-}
-
-chExceptions = #(sequential-music-to-chord-exceptions chExceptionMusic #t)
+  \include "Definitions.ly"
 
 #(set-global-staff-size 19)
 
@@ -22,7 +11,7 @@ chExceptions = #(sequential-music-to-chord-exceptions chExceptionMusic #t)
 \header {
   title = "Theme from Star Trek"
   composer = "Alexander Courage & Jerry Goldsmith"
-  tagline = ""
+  tagline = "foo"
 }
 
 <<
@@ -30,81 +19,43 @@ chExceptions = #(sequential-music-to-chord-exceptions chExceptionMusic #t)
     \chordmode {
       \set chordNameExceptions = #chExceptions
       \set chordChanges = ##t
-      bf1:maj7
-      bf1:maj7
-      gf1:9
-      gf1:9
-      bf1:maj7
-      bf1:maj7
-      ef1:9.11+
-      ef1:9.11+
-      c1:maj7
-      c1:maj7
-      b2:9.5-
-      b2:9
-      b1:9
-      df1:maj7
-      df1:maj7
-      f2:7.9+
-      f2:7
-      f1:7
-      bf1:maj7
-      bf1:maj7
-      gf1:9
-      gf1:9
-      bf1:maj7
-      bf1:maj7
-      ef1:9.11+
-      d1:7.9+
-      ef1:maj7
-      ef1:m6
-      d1:m
-      g1:7.5+.9-
-      c1:m
-      f2:9
-      f2:7.9-
-      bf1:maj7
-      bf1:maj7
+      bf1:maj7 bf1:maj7 gf1:9 gf1:9 \break
+      bf1:maj7 bf1:maj7 ef1:9.11+ ef1:9.11+ \break
+      c1:maj7 c1:maj7 b2:9.5- b2:9 b1:9 \break
+      df1:maj7 df1:maj7 f2:7.9+ f2:7 f1:7 \break
+      bf1:maj7 bf1:maj7 gf1:9 gf1:9 \break
+      bf1:maj7 bf1:maj7 ef1:9.11+ d1:7.9+ \break
+      ef1:maj7 ef1:m6 d1:m g1:7.5+.9- \break
+      c1:m f2:9 f2:7.9- bf1:maj7 bf1:maj7
     }
   }
   \new Lyrics \lyricmode {
-    \markup { \fret-diagram-terse #"6;x;7;7;6;x;" }1
-    \markup { }1
-    \markup { \fret-diagram-terse #"x;9;8;9;9;x;" }1
-    \markup { }1
-    \break
-    \markup { \fret-diagram-terse #"6;x;7;7;6;x;" }1
-    \markup { }1
-    \markup { \fret-diagram-terse #"x;6;7;6;6;x;" }1
-    \markup { }1
-    \break
-    \markup { \fret-diagram-terse #"8;x;9;9;8;x;" }1
-    \markup { }1
+    \markup { \fret-diagram-terse #"6;x;7;7;6;x;" }1 _1
+    \markup { \fret-diagram-terse #"x;9;8;9;9;x;" }1 _1
+
+    \markup { \fret-diagram-terse #"6;x;7;7;6;x;" }1 _1
+    \markup { \fret-diagram-terse #"x;6;7;6;6;x;" }1 _1
+
+    \markup { \fret-diagram-terse #"8;x;9;9;8;x;" }1 _1
     \markup { \fret-diagram-terse #"7;x;7;6;6;x;" }2
-    \markup { \fret-diagram-terse #"7;x;7;6;7;x;" }2
-    \markup { }1
-    \break
-    \markup { \fret-diagram-terse #"9;x;10;10;9;x;" }1
-    \markup { }1
-    \markup { \fret-diagram-terse #"x;8;10;8;9;x;" }2
-    \markup { \fret-diagram-terse #"x;8;10;8;10;x;" }2
-    \markup { }1
-    \break
-    \markup { \fret-diagram-terse #"6;x;7;7;6;x;" }1
-    \markup { }1
-    \markup { \fret-diagram-terse #"x;9;8;9;9;x;" }1
-    \markup { }1
-    \break
-    \markup { \fret-diagram-terse #"6;x;7;7;6;x;" }1
-    \markup { }1
+    \markup { \fret-diagram-terse #"7;x;7;6;7;x;" }2 _1
+
+    \markup { \fret-diagram-terse #"9;x;10;10;9;x;" }1 _1
+    \markup { \fret-diagram-terse #"x;8;10;8;9;x;"  }2
+    \markup { \fret-diagram-terse #"x;8;10;8;10;x;" }2 _1
+
+    \markup { \fret-diagram-terse #"6;x;7;7;6;x;" }1 _1
+    \markup { \fret-diagram-terse #"x;9;8;9;9;x;" }1 _1
+
+    \markup { \fret-diagram-terse #"6;x;7;7;6;x;" }1 _1
     \markup { \fret-diagram-terse #"x;6;7;6;6;x;" }1
     \markup { \fret-diagram-terse #"x;5;4;5;6;x;" }1
-    \break
+
     \markup { \fret-diagram-terse #"x;6;8;7;8;x;" }1
     \markup { \fret-diagram-terse #"x;6;4;5;4;x;" }1
     \markup { \fret-diagram-terse #"x;5;7;7;6;x;" }1
     \markup { \fret-diagram-terse #"x;x;5;4;4;4;" }1
-    \break
+
     \markup { \fret-diagram-terse #"x;3;5;5;4;x;" }1
     \markup { \fret-diagram-terse #"x;8;7;8;8;x;" }2
     \markup { \fret-diagram-terse #"x;8;7;8;7;x;" }2

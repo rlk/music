@@ -1,12 +1,5 @@
 \language "english"
-
-chExceptionMusic = {
-  <c e  g  b >1-\markup { "ma" \super "7" }
-  <c ef g  bf>1-\markup { "mi" \super "7" }
-  <c ef gf bf>1-\markup { "mi" \super { "7" \hspace #0.4 \raise #0.4 \smaller{\flat} "5" }}
-}
-
-chExceptions = #(sequential-music-to-chord-exceptions chExceptionMusic #t)
+\include "Definitions.ly"
 
 \paper {
 	#(set-paper-size "letter")

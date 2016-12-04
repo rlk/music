@@ -2,17 +2,7 @@
 
 \language "english"
 \version "2.18.2"
-
-chExceptionMusic = {
-  <c e  g  b >1-\markup       { "ma" \super "7"  }
-  <c ef g  bf>1-\markup       { "mi" \super "7"  }
-  <c ef g  bf d' f'>1-\markup { "mi" \super "11" }
-  <c ef gf bf>1-\markup       { "mi" \super { "7"  \hspace #0.4 \raise #0.4 \smaller{\flat}  "5"  }}
-  <c e g bf d' fs'>1-\markup    {    \super { "9"  \hspace #0.4 \raise #0.4 \smaller{\sharp} "11" }}
-  <c e g bf d' fs' a'>1-\markup {    \super { "13" \hspace #0.4 \raise #0.4 \smaller{\sharp} "11" }}
-}
-
-chExceptions = #(sequential-music-to-chord-exceptions chExceptionMusic #t)
+\include "Definitions.ly"
 
 \paper {
   indent = 0
@@ -55,6 +45,58 @@ chExceptions = #(sequential-music-to-chord-exceptions chExceptionMusic #t)
       a2:7 d2:7
     }
   }
+  \new Staff {
+    \clef "treble_8"
+    \new Voice = "guitar" {
+      \key d \major
+
+      <d a cs' fs'>2^\markup { \fret-diagram-terse #"x;5;7;6;7;x;" } % Dma7
+      <b, a c' fs'>2^\markup { \fret-diagram-terse #"7;x;7;5;7;x;" } % B7b9
+      <e g d' e'>2^\markup   { \fret-diagram-terse #"x;7;5;7;5;x;" } % Emi7
+      <a, g cs' e'>2^\markup { \fret-diagram-terse #"5;x;5;6;5;x;" } % A7
+
+      <a, d a cs' fs'>1^\markup { \fret-diagram-terse #"x;o;o;2;2;2;" } % Dma7
+      <g, b, d a cs'>1^\markup  { \fret-diagram-terse #"3;2;o;2;2;x;" } % G9#11
+      <cs es b d'>2^\markup     { \fret-diagram-terse #"x;4;3;4;3;x;" } % C#7b9 (#5)
+      <fs as e' g'>2^\markup    { \fret-diagram-terse #"x;x;4;3;5;3;" } % F#7b9 (#5)
+
+      <b, a ds' gs'>2^\markup   { \fret-diagram-terse #"x;2;x;2;4;4;" } % B7.13
+      <b, a ds' fss'>2^\markup  { \fret-diagram-terse #"x;2;x;2;4;3;" } % B7.#5
+
+      s1 s1
+
+      <d a cs' fs'>2^\markup { \fret-diagram-terse #"x;5;7;6;7;x;" } % Dma7
+      <b, a c' fs'>2^\markup { \fret-diagram-terse #"7;x;7;5;7;x;" } % B7b9
+      <e g d' e'>2^\markup   { \fret-diagram-terse #"x;7;5;7;5;x;" } % Emi7
+      <a, g cs' e'>2^\markup { \fret-diagram-terse #"5;x;5;6;5;x;" } % A7
+
+      <a, d a cs' fs'>1^\markup { \fret-diagram-terse #"x;o;o;2;2;2;" } % Dma7
+
+      s1 s1 s1 s1 s1 s1 s1
+
+      \key g \major
+
+      <g, g b e'>2^\markup   { \fret-diagram-terse #"3;x;5;4;5;x;" } % G6
+      <e g d' fs'>2^\markup  { \fret-diagram-terse #"x;7;5;7;7;x;" } % Emi9
+      <a, g c' e'>2^\markup  { \fret-diagram-terse #"5;x;5;5;5;x;" } % Ami7
+      <d fs c' ef'>2^\markup { \fret-diagram-terse #"x;5;4;5;4;x;" } % D7b9
+
+      <g, g b e'>2^\markup   { \fret-diagram-terse #"3;x;5;4;5;x;" } % G6
+      <e g d' fs'>2^\markup  { \fret-diagram-terse #"x;7;5;7;7;x;" } % Emi9
+      <a, g c' e'>2^\markup  { \fret-diagram-terse #"5;x;5;5;5;x;" } % Ami7
+      <d fs c' ef'>2^\markup { \fret-diagram-terse #"x;5;4;5;4;x;" } % D7b9
+
+      <g b e' g'>2^\markup   { \fret-diagram-terse #"x;10;9;9;8;x;"  } % G6
+      <f b f' g'>2^\markup   { \fret-diagram-terse #"x;8;9;10;8;x;"  } % G7/F
+      <e c' e' a'>2^\markup  { \fret-diagram-terse #"x;7;10;9;10;x;" } % C6/E
+      <ef a ef' g'>2^\markup { \fret-diagram-terse #"x;6;7;8;8;x;"   } % Cmi6/Eb
+
+      <d g b e'>2^\markup    { \fret-diagram-terse #"x;5;5;4;5;x;" } % G6/D
+      <e b d' g'>2^\markup   { \fret-diagram-terse #"x;7;9;7;8;x;" } % Emi7
+      <a, g cs' e'>2^\markup { \fret-diagram-terse #"5;x;5;6;5;x;" } % A7
+      <d a c' fs'>2^\markup  { \fret-diagram-terse #"x;5;7;5;7;x;" } % D7
+    }
+	}
   \new Staff {
     \clef "treble_8"
     \new Voice = "melody" {
@@ -111,57 +153,5 @@ chExceptions = #(sequential-music-to-chord-exceptions chExceptionMusic #t)
     You say nee -- ther and I say ny -- ther.
     Ee -- ther, eye -- ther, nee -- ther, ny -- ther!
     Let's call the whole thing off.
-  }
-  \new Staff {
-    \clef "treble_8"
-    \new Voice = "guitar" {
-      \key d \major
-
-      <d a cs' fs'>2^\markup { \fret-diagram-terse #"x;5;7;6;7;x;" } % Dma7
-      <b, a c' fs'>2^\markup { \fret-diagram-terse #"7;x;7;5;7;x;" } % B7b9
-      <e g d' e'>2^\markup   { \fret-diagram-terse #"x;7;5;7;5;x;" } % Emi7
-      <a, g cs' e'>2^\markup { \fret-diagram-terse #"5;x;5;6;5;x;" } % A7
-
-      <a, d a cs' fs'>1^\markup { \fret-diagram-terse #"x;o;o;2;2;2;" } % Dma7
-      <g, b, d a cs'>1^\markup  { \fret-diagram-terse #"3;2;o;2;2;x;" } % G9#11
-      <cs es b d'>2^\markup     { \fret-diagram-terse #"x;4;3;4;3;x;" } % C#7b9 (#5)
-      <fs as e' g'>2^\markup    { \fret-diagram-terse #"x;x;4;3;5;3;" } % F#7b9 (#5)
-
-      <b, a ds' gs'>2^\markup   { \fret-diagram-terse #"x;2;x;2;4;4;" } % B7.13
-      <b, a ds' fss'>2^\markup  { \fret-diagram-terse #"x;2;x;2;4;3;" } % B7.#5
-
-      s1 s1
-
-      <d a cs' fs'>2^\markup { \fret-diagram-terse #"x;5;7;6;7;x;" } % Dma7
-      <b, a c' fs'>2^\markup { \fret-diagram-terse #"7;x;7;5;7;x;" } % B7b9
-      <e g d' e'>2^\markup   { \fret-diagram-terse #"x;7;5;7;5;x;" } % Emi7
-      <a, g cs' e'>2^\markup { \fret-diagram-terse #"5;x;5;6;5;x;" } % A7
-
-      <a, d a cs' fs'>1^\markup { \fret-diagram-terse #"x;o;o;2;2;2;" } % Dma7
-
-      s1 s1 s1 s1 s1 s1 s1
-
-      \key g \major
-
-      <g, g b e'>2^\markup   { \fret-diagram-terse #"3;x;5;4;5;x;" } % G6
-      <e g d' fs'>2^\markup  { \fret-diagram-terse #"x;7;5;7;7;x;" } % Emi9
-      <a, g c' e'>2^\markup  { \fret-diagram-terse #"5;x;5;5;5;x;" } % Ami7
-      <d fs c' ef'>2^\markup { \fret-diagram-terse #"x;5;4;5;4;x;" } % D7b9
-
-      <g, g b e'>2^\markup   { \fret-diagram-terse #"3;x;5;4;5;x;" } % G6
-      <e g d' fs'>2^\markup  { \fret-diagram-terse #"x;7;5;7;7;x;" } % Emi9
-      <a, g c' e'>2^\markup  { \fret-diagram-terse #"5;x;5;5;5;x;" } % Ami7
-      <d fs c' ef'>2^\markup { \fret-diagram-terse #"x;5;4;5;4;x;" } % D7b9
-
-      <g b e' g'>2^\markup   { \fret-diagram-terse #"x;10;9;9;8;x;"  } % G6
-      <f b f' g'>2^\markup   { \fret-diagram-terse #"x;8;9;10;8;x;"  } % G7/F
-      <e c' e' a'>2^\markup  { \fret-diagram-terse #"x;7;10;9;10;x;" } % C6/E
-      <ef a ef' g'>2^\markup { \fret-diagram-terse #"x;6;7;8;8;x;"   } % Cmi6/Eb
-
-      <d g b e'>2^\markup    { \fret-diagram-terse #"x;5;5;4;5;x;" } % G6/D
-      <e b d' g'>2^\markup   { \fret-diagram-terse #"x;7;9;7;8;x;" } % Emi7
-      <a, g cs' e'>2^\markup { \fret-diagram-terse #"5;x;5;6;5;x;" } % A7
-      <d a c' fs'>2^\markup  { \fret-diagram-terse #"x;5;7;5;7;x;" } % D7
-    }
   }
 >>
