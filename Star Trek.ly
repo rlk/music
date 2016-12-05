@@ -10,6 +10,7 @@
 
 \header {
   title = "Theme from Star Trek"
+  subtitle = "Where No Man Has Gone Before"
   composer = "Alexander Courage & Jerry Goldsmith"
   tagline = "Lilypond engraving by github.com/rlk"
 }
