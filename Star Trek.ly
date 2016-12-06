@@ -62,6 +62,7 @@
   }
   \new Staff {
     \clef "treble_8"
+    \numericTimeSignature
     f2 ef'2~ ef'4 d'4 \tuplet 3/2 { c'4 bf a} af1~ af2. gf4
     f2 f'2~ f'4 ef'4 \tuplet 3/2 { d'4 c' bf } a1~ a2. af4
     g2. a4 b4 c'4 \tuplet 3/2 { d'4 e' f' } g'2 gs'2~ gs'1
