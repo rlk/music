@@ -40,7 +40,7 @@
     a2:maj7 fs2:m7
     b2:m7 e2:7.9-
     \break
-    e1:m11
+    a1:6
     a1:7
     d1:6
     a2:m7 d2:7
@@ -98,8 +98,8 @@
     \markup { \fret-diagram-terse $"x;7;5;7;5;x;" }2 % Emi7
 
     \markup { \fret-diagram-terse $"5;x;5;6;5;x;" }2 % A7
-    \markup { \fret-diagram-terse $"x;o;o;2;2;2;" }1 % Dma7
-    \markup { \fret-diagram-terse $"3;2;o;2;2;x;" }1 % G9#11
+    \markup { \fret-diagram-terse $"x;5;7;6;7;x;" }1 % Dma7
+    \markup { \fret-diagram-terse $"x;x;5;6;6;5;" }1 % G9#11
 
     \markup { \fret-diagram-terse $"x;4;3;4;3;x;" }2 % C#7b9 (#5)
     \markup { \fret-diagram-terse $"x;x;4;3;5;3;" }2 % F#7b9 (#5)
@@ -116,17 +116,17 @@
     \markup { \fret-diagram-terse $"x;7;5;7;5;x;" }2 % Emi7
 
     \markup { \fret-diagram-terse $"5;x;5;6;5;x;" }2 % A7
-    \markup { \fret-diagram-terse $"x;o;o;2;2;2;" }1 % Dma7
-    \markup { \fret-diagram-terse $"x;7;5;7;5;o;" }1 % G13#11
+    \markup { \fret-diagram-terse $"x;5;7;6;7;x;" }1 % Dma7
+    \markup { \fret-diagram-terse $"x;7;5;7;5;x;" }1 % G13#11
 
     \markup { \fret-diagram-terse $"5;x;6;6;5;x;" }2 % Ama7
     \markup { \fret-diagram-terse $"x;9;11;9;10;x;" }2 % F#mi7
     \markup { \fret-diagram-terse $"7;x;7;7;7;x;" }2 % Bmi7
     \markup { \fret-diagram-terse $"x;7;6;7;6;x;" }2 % E7b9
-    _1 % Emi11
+    \markup { \fret-diagram-terse $"5;x;7;6;7;x;" }1 % A6
 
     \markup { \fret-diagram-terse $"5;x;5;6;5;x;" }1 % A7
-    _1 % D6
+    \markup { \fret-diagram-terse $"x;5;x;7;7;7;" }1 % D6
     \markup { \fret-diagram-terse $"5;x;5;5;5;x;" }2 % Ami7
     \markup { \fret-diagram-terse $"x;5;7;5;7;x;" }2 % D7
 
@@ -146,7 +146,7 @@
     \markup { \fret-diagram-terse $"x;6;7;8;8;x;"   }2 % Cmi6/Eb
 
     \markup { \fret-diagram-terse $"x;5;5;4;5;x;" }2 % G6/D
-    \markup { \fret-diagram-terse $"x;7;9;7;8;x;" }2 % Emi7
+    \markup { \fret-diagram-terse $"x;7;5;7;5;x;" }2 % Emi7
     \markup { \fret-diagram-terse $"5;x;5;6;5;x;" }2 % A7
     \markup { \fret-diagram-terse $"x;5;7;5;7;x;" }2 % D7
 
@@ -166,7 +166,7 @@
     \markup { \fret-diagram-terse $"x;6;7;8;8;x;"   }2 % Cmi6/Eb
 
     \markup { \fret-diagram-terse $"x;5;5;4;5;x;" }2 % G6/D
-    \markup { \fret-diagram-terse $"x;7;9;7;8;x;" }2 % Emi7
+    \markup { \fret-diagram-terse $"x;7;5;7;5;x;" }2 % Emi7
     \markup { \fret-diagram-terse $"5;x;5;6;5;x;" }2 % A7
     \markup { \fret-diagram-terse $"x;5;7;5;7;x;" }2 % D7
 
@@ -200,12 +200,12 @@
     \markup { \fret-diagram-terse $"x;6;7;8;8;x;"   }2 % Cmi6/Eb
 
     \markup { \fret-diagram-terse $"x;5;5;4;5;x;" }2 % G6/D
-    \markup { \fret-diagram-terse $"5;x;5;5;5;x;" }2 % Ami7
-    \markup { \fret-diagram-terse $"x;5;7;5;7;x;" }2 % D7
-    _2 % B7#5
+    \markup { \fret-diagram-terse $"5;x;5;5;5;x;" }4 % Ami7
+    \markup { \fret-diagram-terse $"x;5;7;5;7;x;" }4 % D7
+    \markup { \fret-diagram-terse $"7;x;7;8;8;x;" }2 % B7#5
     \markup { \fret-diagram-terse $"x;7;6;7;6;x;" }2 % E7b9
     \markup { \fret-diagram-terse $"5;x;5;5;5;x;" }2 % Ami7
-    _2 % D9(13)
+    \markup { \fret-diagram-terse $"x;5;7;5;5;7;" }2 % D9 13
     \markup { \fret-diagram-terse $"3;x;5;4;5;x;" }1 % G6
 
 
