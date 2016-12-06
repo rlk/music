@@ -14,4 +14,4 @@ chExceptionMusic = {
 chExceptions = #(sequential-music-to-chord-exceptions chExceptionMusic #t)
 
 % Prefer the use of the Lilypond scheme $ syntax to the # syntax for string
-% Literals due to SubLilyPond detecting ; in a # string as a comment.
+% literals due to SubLilyPond detecting ; in a # string as a comment.

@@ -1,8 +1,9 @@
-% https://youtu.be/LOILZ_D3aRg
-
 \language "english"
 \version "2.18.2"
 \include "Definitions.ly"
+\pointAndClickOff
+
+% https://youtu.be/LOILZ_D3aRg
 
 #(set-global-staff-size 18)
 

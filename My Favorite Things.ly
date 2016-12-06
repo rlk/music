@@ -1,5 +1,7 @@
 \language "english"
+\version "2.18.2"
 \include "Definitions.ly"
+\pointAndClickOff
 
 #(set-global-staff-size 18)
 
