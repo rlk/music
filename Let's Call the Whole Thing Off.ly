@@ -25,21 +25,20 @@
     d2:maj7 b2:7.9-
     e2:m7 a2:7
     d1:maj7
-    \break
     g1:9.11+
+    \break
     cs2:7.9-.5+ fs2:7.9-.5+
     b2:7.13 b2:7.5+
-    \break
     e2:13sus4 e2:13.9-
     e2:m7 a2:7
+    \break
     d2:maj7 b2:7.9-
     e2:m7 a2:7
-    \break
     d1:maj7
     g1:13.11+
+    \break
     a2:maj7 fs2:m7
     b2:m7 e2:7.9-
-    \break
     a1:6
     a1:7
     d1:6
@@ -53,8 +52,8 @@
     a2:m7 d2:7.9-
     g2:6 g2:7/f
     c2:6/e c2:m6/ef
-    g2:6/d e2:m7
     \break
+    g2:6/d e2:m7
     a2:7 d2:7
     g2:6 e2:m9
     a2:m7 d2:7.9-
