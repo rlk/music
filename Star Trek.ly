@@ -1,6 +1,7 @@
 \language "english"
 \version "2.18.2"
 \include "Definitions.ly"
+\pointAndClickOff
 
 #(set-global-staff-size 18)
 
@@ -48,7 +49,7 @@
 
     \markup { \fret-diagram-terse $"6;x;7;7;6;x;" }1 _1
     \markup { \fret-diagram-terse $"x;6;7;6;6;x;" }1
-    \markup { \fret-diagram-terse $"x;5;4;5;6;x;" }1
+    \markup { \fret-diagram-terse $"x;5;7;5;6;x;" }1
 
     \markup { \fret-diagram-terse $"x;6;8;7;8;x;" }1
     \markup { \fret-diagram-terse $"x;6;4;5;4;x;" }1
