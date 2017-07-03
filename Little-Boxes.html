@@ -1,15 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<script src="abcjs_plugin_latest-min.js" type="text/javascript"></script>
-	<script type="text/javascript">
-		window.ABCJS.plugin.hide_abc = true;
-	</script>
+<meta charset="UTF-8">
+<script src="etc/abcjs_basic_3.1.2-min.js" type="text/javascript"></script>
 </head>
 <body>
-
-<div>
-%%titlefont "Times New Roman" 21
+<script id="input" type="text/plain">%%titlefont "Times New Roman" 21
 %%tempofont "Times New Roman" 13
 %%vocalfont "Times New Roman" 13
 %%wordsfont "Times New Roman" 13
@@ -23,13 +19,13 @@ L: 1/8
 Q: 122
 C: Malvina Reynolds (1962)
 K: F
-cd | "F"A2 F2 cd | "F"A2 F2 cc | "B&flat;"f2 f2 fg | "F"ag ff fd |
+cd | "F"A2 F2 cd | "F"A2 F2 cc | "Bb"f2 f2 fg | "F"ag ff fd |
 w: Lit-tle box-es on the hill-side. Lit-tle box-es made of tic-ky tac-ky. Lit-tle
 "F"c2 c2 cd | "C7"B2 B2 Bc | "F"A2 A2 AB | "C7"G4 cd |
 w: box-es on the hill-side. Lit-tle box-es all the same. There's a
-"F"A2 F2 cd | "F"A2 F2 cc | "B&flat;"f2 f2 fg | "F"ag f2 fd |
+"F"A2 F2 cd | "F"A2 F2 cc | "Bb"f2 f2 fg | "F"ag f2 fd |
 w: pink one and a green one and a blue one and a yel-low one. And they're
-"F"c2 c2 cd | "B&flat;"BB BB Bc | "F"A2 A2 "C7"GG | "F"F4 z2 ||
+"F"c2 c2 cd | "Bb"BB BB Bc | "F"A2 A2 "C7"GG | "F"F4 z2 ||
 w: all made out of tic-ky tac-ky and they all look just the same.
 W: And the people in the houses
 W: All went to the university,
@@ -57,6 +53,10 @@ W: There's a green one and a pink one
 W: And a blue one and a yellow one,
 W: And they're all made out of ticky tacky
 W: And they all look just the same.
-</div>
+</script>
+<div id="output"></div>
+<script type="text/javascript">
+ABCJS.renderAbc('output', document.getElementById('input').text, {}, {}, {});
+</script>
 </body>
 </html>
