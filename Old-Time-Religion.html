@@ -2,16 +2,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<script src="etc/abcjs_basic_3.1.2-min.js" type="text/javascript"></script>
+<script src="etc/abc.js" type="text/javascript"></script>
 </head>
-<body>
-<script id="input" type="text/plain">%%titlefont "Times New Roman" 21
-%%tempofont "Times New Roman" 13
-%%vocalfont "Times New Roman" 13
-%%wordsfont "Times New Roman" 13
-%%gchordfont "Times New Roman" 13
-%%composerfont "Times New Roman" 13
-%%staffsep 60pt
+<body onload="processABC('output', 'input')">
+<div id="output"></div>
+<script id="input" type="text/plain">
 X: 1
 T: Old Time Religion
 M: 2/4
@@ -54,10 +49,6 @@ W: That the solar age is dawning,
 W: And that's good enough for me.
 W:
 W:* Lyrics differ slightly from Seeger's performance
-</script>
-<div id="output"></div>
-<script type="text/javascript">
-ABCJS.renderAbc('output', document.getElementById('input').text, {}, {}, {});
 </script>
 </body>
 </html>

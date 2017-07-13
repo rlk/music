@@ -2,13 +2,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<script src="etc/abcjs_basic_3.1.2-min.js" type="text/javascript"></script>
+<script src="etc/abc.js" type="text/javascript"></script>
 </head>
-<body>
-<script id="input" type="text/plain">%%titlefont "Times New Roman" 21
-%%vocalfont "Times New Roman" 13
-%%wordsfont "Times New Roman" 13
-%%gchordfont "Times New Roman" 13
+<body onload="processABC('output', 'input')">
+<div id="output"></div>
+<script id="input" type="text/plain">
 X: 1
 T: Little Boxes
 M: 3/4
@@ -50,10 +48,6 @@ W: There's a green one and a pink one
 W: And a blue one and a yellow one,
 W: And they're all made out of ticky tacky
 W: And they all look just the same.
-</script>
-<div id="output"></div>
-<script type="text/javascript">
-ABCJS.renderAbc('output', document.getElementById('input').text, {}, {}, {});
 </script>
 </body>
 </html>

@@ -2,13 +2,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<script src="etc/abcjs_basic_3.1.2-min.js" type="text/javascript"></script>
+<script src="etc/abc.js" type="text/javascript"></script>
 </head>
-<body>
-<script id="input" type="text/plain">%%titlefont "Times New Roman" 21
-%%vocalfont "Times New Roman" 13
-%%wordsfont "Times New Roman" 13
-%%gchordfont "Times New Roman" 13
+<body onload="processABC('output', 'input')">
+<div id="output"></div>
+<script id="input" type="text/plain">
 X: 1
 T: Hold the Line
 M: 4/4
@@ -54,10 +52,7 @@ W:
 W: All across the nation the people heard the tale,
 W: And marveled at the concert, and knew we had not failed.
 W: We shed our blood at Peekskill, and suffered many a pain,
-W: But we beat back the fascists and we'll beat them back again!</script>
-<div id="output"></div>
-<script type="text/javascript">
-ABCJS.renderAbc('output', document.getElementById('input').text, {}, {}, {});
+W: But we beat back the fascists and we'll beat them back again!
 </script>
 </body>
 </html>

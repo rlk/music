@@ -2,13 +2,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<script src="etc/abcjs_basic_3.1.2-min.js" type="text/javascript"></script>
+<script src="etc/abc.js" type="text/javascript"></script>
 </head>
-<body>
-<script id="input" type="text/plain">%%titlefont "Times New Roman" 21
-%%vocalfont "Times New Roman" 13
-%%wordsfont "Times New Roman" 13
-%%gchordfont "Times New Roman" 13
+<body onload="processABC('output', 'input')">
+<div id="output"></div>
+<script id="input" type="text/plain">
 X: 1
 T: Twinkle, Twinkle, Little Star
 M: 4/4
@@ -38,10 +36,6 @@ W: As your bright and tiny spark
 W: Lights the traveller in the dark,
 W: Though I know not what you are,
 W: Twinkle, twinkle, little star.
-</script>
-<div id="output"></div>
-<script type="text/javascript">
-ABCJS.renderAbc('output', document.getElementById('input').text, {}, {}, {});
 </script>
 </body>
 </html>
