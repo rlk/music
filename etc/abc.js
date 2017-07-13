@@ -20,7 +20,8 @@ function processABC(output, input)
 		'%%infofont       "Times New Roman" 13',
 		'%%textfont       "Times New Roman" 13',
 		'%%gchordfont     "Times New Roman" 13',
-		'%%annotationfont "Times New Roman" 13',
+		'%%historyfont    "Times New Roman" Italic 13',
+		'%%annotationfont "Times New Roman" Italic 13',
 		'%%stretchlast',
 	].join('\n');
 
