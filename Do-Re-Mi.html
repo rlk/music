@@ -4,8 +4,9 @@
 <meta charset="UTF-8">
 <script src="etc/abc.js" type="text/javascript"></script>
 </head>
-<body onload="processABC('output', 'input')">
-<div id="output"></div>
+<body>
+<div id="midi"></div>
+<div id="tune"></div>
 <script id="input" type="text/plain">
 X: 1
 T: Do Re Mi
@@ -14,34 +15,44 @@ L: 1/8
 Q: 124
 C: Woody Guthrie (1940)
 K: E
-N: The sus2 embellishments on the I and V chords are an important aspect of Guthrie's
+|:"E"GG GG GG G2|"A"FE E2 FE C2|
+w: Lots of folks back East, they say, is~leav-ing home ev-ery day
+w: You~want to buy you a~home or farm that can't deal~no bo-dy harm
+"B7"DD DE FF FB,|"E"E2 EF G4|
+w: Beat-ing the~hot old dust-y way to~the Cali-forn-ia line.
+w: Or take your va-ca-tion by the moun-tains or sea.~Don't
+"E"B,B, B,E GG G2|"A"FE EE FE CC|
+w: Across the de-sert sands they roll, get-ting out~of that old dust bowl, they
+w: swap your old cow for a car,~you bet-ter stay right where you are. You
+"B7"DD DE FF FB,|"E"E2 CB, E4|
+w: think they're going to~a sug-ar bowl, but here's what they find.
+w: bet-ter take this lit-tle tip from me. _ _ 'Cause~I
+"B7"FF FF FD CD|B,6 B,2|
+w: The~po-lice at the port of en-try say, You're
+w: look _ through the want ads ev-ery day, but~the
+"B7"FF FG FF FF|B4 B2 AF|
+w: num-ber four-teen thou-sand for to-day. Oh, if you
+w: head-lines on the pa-pers al-ways say:
+"E"G2 EE F2 G2|G4 E4|
+w: ain't got the do re mi, folks,
+"E"EE EG B2 G2|"B7"F6 FG|
+w: you ain't got the do re mi. Why, you
+"B7"AA AA A2 FF|DB,- B,4 BB|
+w: better go back to beau-ti-ful Tex-as, _ Ok-la
+"B7"BB Bc BG FF|"E"GE- E4 B,B,|
+w: ho-ma, Kan-sas, Geor-gia, Ten-nes-see. _ _ Ca-li
+"E"EE EE F2 EF|GE- E4 G2|
+w: forn-ia is a gar-den of E-den. _ A
+"E"FE EE B2 Bc|"A"A2- A4 B,B,|
+w: pa-ra-dise to live in or see. _ But, be-
+"E"EE- EF G2 GA|B2 cB G2 EF|
+w: lieve it _ or not, you won't find it so hot if you
+"E"GE- EB, "B7"E2 F2|"E"E8:|
+w: ain't got _ the do re mi.
+N: The 2-3 hammer-on embellishments on the I and V chords are an important aspect of Guthrie's
 N: performance of this tune and strongly indicate that he played it in the C position.
 N: To sound in E, as he does, capo at the 4th fret.
-W: Lots of folks back East, they say, is leavin' home every day,
-W: Beatin' the hot old dusty way to the California line.
-W: 'Cross the desert sands they roll, gettin' out of that old dust bowl,
-W: They think they're goin' to a sugar bowl, but here's what they find
-W: Now, the police at the port of entry say,
-W: "You're number fourteen thousand for today."
-W:
-W: Oh, if you ain't got the do re mi, folks, you ain't got the do re mi,
-W: Why, you better go back to beautiful Texas, Oklahoma, Kansas, Georgia, Tennessee.
-W: California is a Garden of Eden, a paradise to live in or see;
-W: But believe it or not, you won't find it so hot
-W: If you ain't got the do re mi.
-W:
-W: You want to buy you a home or a farm, that can't deal nobody harm,
-W: Or take your vacation by the mountains or sea.
-W: Don't swap your old cow for a car, you better stay right where you are,
-W: Better take this little tip from me.
-W: 'Cause I look through the want ads every day
-W: But the headlines on the papers always say:
-W:
-W: If you ain't got the do re mi, boys, you ain't got the do re mi,
-W: Why, you better go back to beautiful Texas, Oklahoma, Kansas, Georgia, Tennessee.
-W: California is a Garden of Eden, a paradise to live in or see;
-W: But believe it or not, you won't find it so hot
-W: If you ain't got the do re mi.
 </script>
-</body>
+<script type="text/javascript">processABC('tune', false, 'input')</script>
+S</body>
 </html>

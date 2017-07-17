@@ -6,7 +6,7 @@
 // element. Ensure that abc.js is loaded and apply some common configuration
 // and styling.
 
-function processABC(output, input)
+function processABC(tune, midi, input)
 {
 	var source = document.getElementById(input).text;
 	var header = [
@@ -25,21 +25,45 @@ function processABC(output, input)
 		'%%stretchlast',
 	].join('\n');
 
+	var midiParams = { generateInline: true };
+
 	function render() {
-		ABCJS.renderAbc(output, header + source, {}, {}, {});
+		if (midi)
+			ABCJS.renderMidi(midi, source, {}, midiParams, {});
+		if (tune)
+			ABCJS.renderAbc(tune, header + source, {}, {}, {});
 	}
 
 	if (typeof ABCJS === 'undefined') {
-	    var head   = document.getElementsByTagName('head')[0];
-	    var script = document.createElement('script');
+		var head = document.getElementsByTagName('head')[0];
+		var style;
+		var script;
 
-	    script.type = 'text/javascript';
-	    script.src  = 'etc/abcjs_basic_3.1.2-min.js';
+		function element(tag, attrs) {
+			var e = document.createElement(tag);
+			for (a in attrs) {
+				e.setAttribute(a, attrs[a]);
+			}
+			return e;
+		}
 
-	    script.onreadystatechange = render;
-	    script.onload             = render;
+		if (midi) {
+			style  = element('link', {    'rel': 'stylesheet',
+										 'type': 'text/css',
+										 'href': 'etc/abcjs-midi.css' });
+			script = element('script', { 'type': 'text/javascript',
+										  'src': 'etc/abcjs_basic_midi_3.1.2-min.js' });
+			head.appendChild(style);
+		} else {
+			script = element('script', { 'type': 'text/javascript',
+										  'src': 'etc/abcjs_basic_3.1.2-min.js' });
+		}
 
-	    head.appendChild(script);
+		script.onreadystatechange = render;
+		script.onload             = render;
+
+		head.appendChild(script);
+
 	} else {
 		render();
 	}

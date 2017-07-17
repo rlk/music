@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <script src="etc/abc.js" type="text/javascript"></script>
 </head>
-<body onload="processABC('output', 'input')">
-<div id="output"></div>
+<body>
+<div id="tune"></div>
 <script id="input" type="text/plain">
 X: 1
 T: The Great Dust Storm
@@ -51,5 +51,6 @@ W: It covered up our tractors in this wild and dusty storm.
 W: We loaded our jalopies and piled our families in,
 W: We rattled down that highway to never come back again.
 </script>
+<script type="text/javascript">processABC('tune', false, 'input')</script>
 </body>
 </html>

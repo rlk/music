@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <script src="etc/abc.js" type="text/javascript"></script>
 </head>
-<body onload="processABC('output', 'input')">
-<div id="output"></div>
+<body>
+<div id="tune"></div>
 <script id="input" type="text/plain">
 X: 1
 T: Twinkle, Twinkle, Little Star
@@ -37,5 +37,6 @@ W: Lights the traveller in the dark,
 W: Though I know not what you are,
 W: Twinkle, twinkle, little star.
 </script>
+<script type="text/javascript">processABC('tune', false, 'input')</script>
 </body>
 </html>
