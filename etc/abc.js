@@ -24,14 +24,14 @@ function processABC(tune, midi, input)
 		'%%annotationfont "Times New Roman" Italic 13',
 		'%%stretchlast',
 	].join('\n');
-
-	var midiParams = { generateInline: true };
+	var renderParams = {  oneSvgPerLine: true };
+	var   midiParams = { generateInline: true };
 
 	function render() {
 		if (midi)
 			ABCJS.renderMidi(midi, source, {}, midiParams, {});
 		if (tune)
-			ABCJS.renderAbc(tune, header + source, {}, {}, {});
+			ABCJS.renderAbc(tune, header + source, {}, {}, renderParams);
 	}
 
 	if (typeof ABCJS === 'undefined') {
