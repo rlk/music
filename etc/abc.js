@@ -1,14 +1,24 @@
-// processABC
-//
-// Takes output and input HTML element IDs.
-//
-// Use the text of the input element as ABC source to be rendered to the output
-// element. Ensure that abc.js is loaded and apply some common configuration
-// and styling.
 
-function processABC(tune, midi, input)
-{
-	var source = document.getElementById(input).text;
+// Load named Javscript source file and invoke the callback.
+
+function include(source, callback) {
+	var script = document.createElement('script');
+
+	script.setAttribute('type', 'text/javascript');
+	script.setAttribute('src', source);
+
+	script.onreadystatechange = callback;
+	script.onload             = callback;
+
+	var head = document.getElementsByTagName('head')[0];
+
+	head.appendChild(script);
+}
+
+// Iterate over all elements of class "abc" and render the text of each as ABC
+
+function render() {
+	var params = { oneSvgPerLine: true };
 	var header = [
 		'%%titlefont      "Times New Roman" 21',
 		'%%subtitlefont   "Times New Roman" 13',
@@ -24,47 +34,22 @@ function processABC(tune, midi, input)
 		'%%annotationfont "Times New Roman" Italic 13',
 		'%%stretchlast',
 	].join('\n');
-	var renderParams = {  oneSvgPerLine: true };
-	var   midiParams = { generateInline: true };
 
-	function render() {
-		if (midi)
-			ABCJS.renderMidi(midi, source, {}, midiParams, {});
-		if (tune)
-			ABCJS.renderAbc(tune, header + source, {}, {}, renderParams);
-	}
+	var abcs = document.getElementsByClassName('abc');
 
-	if (typeof ABCJS === 'undefined') {
-		var head = document.getElementsByTagName('head')[0];
-		var style;
-		var script;
+	for (var i = 0; i < abcs.length; i++) {
+		var div = document.createElement('div');
+		var abc = abcs.item(i);
 
-		function element(tag, attrs) {
-			var e = document.createElement(tag);
-			for (a in attrs) {
-				e.setAttribute(a, attrs[a]);
-			}
-			return e;
-		}
+		abc.parentElement.insertBefore(div, abc);
 
-		if (midi) {
-			style  = element('link', {    'rel': 'stylesheet',
-										 'type': 'text/css',
-										 'href': 'etc/abcjs-midi.css' });
-			script = element('script', { 'type': 'text/javascript',
-										  'src': 'etc/abcjs_basic_midi_3.1.2-min.js' });
-			head.appendChild(style);
-		} else {
-			script = element('script', { 'type': 'text/javascript',
-										  'src': 'etc/abcjs_basic_3.1.2-min.js' });
-		}
-
-		script.onreadystatechange = render;
-		script.onload             = render;
-
-		head.appendChild(script);
-
-	} else {
-		render();
+		ABCJS.renderAbc(div, header + abc.text, {}, {}, params);
 	}
 }
+
+// Ensure ABC.js is loaded and render all ABC elements.
+
+if (typeof ABCJS === 'undefined')
+	include('etc/abcjs_basic_3.1.2-min.js', render);
+else
+	render();

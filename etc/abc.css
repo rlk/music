@@ -1,0 +1,13 @@
+body {
+	font-family: "Times New Roman";
+	font-size: 13pt;
+}
+
+ol {
+	margin-top: 0em;
+}
+
+li {
+	margin-bottom: 1em;
+	page-break-inside: avoid;
+}
