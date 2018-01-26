@@ -11,3 +11,16 @@ li {
 	margin-bottom: 1em;
 	page-break-inside: avoid;
 }
+
+/* Zero page margin supresses Chrome's header and footer for headless printing */
+
+@media print {
+	@page {
+		margin: 0;
+	}
+	body {
+		margin-left:  1.25in;
+		margin-right: 1.25in;
+		zoom: 0.8;
+	}
+}
