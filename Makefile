@@ -11,12 +11,14 @@ CHROME=/opt/google/chrome/chrome --headless
 
 PDFS= \
 	Blank.pdf \
+	Annies-Song.pdf Blank.pdf \
 	Big-Rock-Candy-Mountain.pdf \
 	Blowin-in-the-Wind.pdf Blank.pdf \
 	Blue-Moon-of-Kentucky.pdf Blank.pdf \
 	Do-Re-Mi.pdf \
 	Hold-the-Line.pdf \
 	Little-Boxes.pdf Blank.pdf \
+	Mack-the-Knife.pdf Blank.pdf \
 	My-Favorite-Things.pdf \
 	Old-Time-Religion.pdf Blank.pdf \
 	The-Alphabet-Song.pdf Blank.pdf \
@@ -29,7 +31,7 @@ PDFS= \
 	Wabash-Cannonball.pdf Blank.pdf \
 	What-Did-You-Learn-in-School-Today.pdf Blank.pdf \
 	Wont-You-Be-My-Neighbor.pdf Blank.pdf \
-	You-Are-My-Sunshine.pdf
+	You-Are-My-Sunshine.pdf Blank.pdf
 
 %.pdf : %.html etc/abc.css
 	$(CHROME) --print-to-pdf=$@ $<
