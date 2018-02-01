@@ -35,7 +35,7 @@ PDFS= \
 	$(CHROME) --print-to-pdf=$@ $<
 
 book : $(PDFS)
-	pdfjoin -q --scale 0.9 -o book.pdf $(PDFS)
+	pdfjoin -q --scale 0.95 -o book.pdf $(PDFS)
 
 clean :
 	rm -f $(PDFS)
