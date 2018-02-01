@@ -12,30 +12,23 @@ CHROME=/opt/google/chrome/chrome --headless
 PDFS= \
 	Blank.pdf \
 	Big-Rock-Candy-Mountain.pdf \
+	Blowin-in-the-Wind.pdf Blank.pdf \
+	Blue-Moon-of-Kentucky.pdf Blank.pdf \
 	Do-Re-Mi.pdf \
 	Hold-the-Line.pdf \
-	Little-Boxes.pdf \
-	Blank.pdf \
+	Little-Boxes.pdf Blank.pdf \
 	My-Favorite-Things.pdf \
-	Old-Time-Religion.pdf \
-	Blank.pdf \
-	The-Alphabet-Song.pdf \
-	Blank.pdf \
+	Old-Time-Religion.pdf Blank.pdf \
+	The-Alphabet-Song.pdf Blank.pdf \
 	The-Digwell-Carol.pdf \
 	The-Elements.pdf \
 	The-Flood-and-the-Storm.pdf \
-	The-Great-Dust-Storm.pdf \
-	Blank.pdf \
-	This-Land-is-Your-Land.pdf \
-	Blank.pdf \
-	Twinkle-Twinkle-Little-Star.pdf \
-	Blank.pdf \
-	Wabash-Cannonball.pdf \
-	Blank.pdf \
-	What-Did-You-Learn-in-School-Today.pdf \
-	Blank.pdf \
-	Wont-You-Be-My-Neighbor.pdf \
-	Blank.pdf \
+	The-Great-Dust-Storm.pdf Blank.pdf \
+	This-Land-is-Your-Land.pdf Blank.pdf \
+	Twinkle-Twinkle-Little-Star.pdf Blank.pdf \
+	Wabash-Cannonball.pdf Blank.pdf \
+	What-Did-You-Learn-in-School-Today.pdf Blank.pdf \
+	Wont-You-Be-My-Neighbor.pdf Blank.pdf \
 	You-Are-My-Sunshine.pdf
 
 %.pdf : %.html etc/abc.css
