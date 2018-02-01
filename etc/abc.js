@@ -18,7 +18,8 @@ function include(source, callback) {
 // Iterate over all elements of class "abc" and render the text of each as ABC
 
 function render() {
-	var params = { oneSvgPerLine: true };
+	var engraverParams = { staffwidth: 880 };
+	var renderParams = { oneSvgPerLine: true };
 	var header = [
 		'%%titlefont      "Times New Roman" 21',
 		'%%subtitlefont   "Times New Roman" 13',
@@ -43,7 +44,7 @@ function render() {
 
 		abc.parentElement.insertBefore(div, abc);
 
-		ABCJS.renderAbc(div, header + abc.text, {}, {}, params);
+		ABCJS.renderAbc(div, header + abc.text, {}, engraverParams, renderParams);
 	}
 }
 
