@@ -33,7 +33,7 @@ function render() {
 		'%%gchordfont     "Times New Roman" 13',
 		'%%historyfont    "Times New Roman" Italic 13',
 		'%%annotationfont "Times New Roman" Italic 13',
-		'%%stretchlast',
+//		'%%stretchlast',
 	].join('\n');
 
 	var abcs = document.getElementsByClassName('abc');
